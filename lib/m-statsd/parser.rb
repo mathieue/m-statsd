@@ -2,7 +2,6 @@ module MStatsd
   class Parser
     attr_reader :timers, :counters, :gauges
 
-
     def initialize
       @timers = {}
       @counters = {}
@@ -41,8 +40,6 @@ module MStatsd
         fields      = b.split('|')
 
         if fields[1]
-
-
           case fields[1].strip
           when 'ms'
             @timers[key] ||= []
@@ -55,7 +52,8 @@ module MStatsd
             @gauges[key] = fields[0].to_f
           end
         end
-      end
-    end
+      end # end bits.each
+    end # end parse_update
+
   end
 end
