@@ -1,4 +1,4 @@
-me-statsd
-=========
+m-statsd
+========
 
-Simple statsd life
+Tiny statsd implementation
