@@ -1,1 +1,5 @@
 require 'm-statsd/parser'
+require 'm-statsd/runner'
+require 'm-statsd/server'
+require 'm-statsd/m-cassandra'
+require 'm-statsd/curses'

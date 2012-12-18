@@ -18,3 +18,9 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+bin/es-test.rb
+
+Makefile
+
+Makefile

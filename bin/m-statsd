@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path(File.join(File.dirname(__FILE__), "..", "lib"))
+require 'm-statsd'
+require 'yaml'
+
+config = YAML.load_file('config.yml')
+
+MStatsd::Runner.run!(config)
+
+Signal.trap('QUIT') { EM.stop }
+Signal.trap('TERM') { EM.stop }
